@@ -1,5 +1,6 @@
 import React from 'react';
-import Input from './Input';
+import GeneralInfoDisplay from './GeneralInfoDisplay.js';
+import GeneralInfoEdit from './GeneralInfoEdit.js';
 
 class GeneralInformation extends React.Component {
   constructor(props) {
@@ -8,10 +9,12 @@ class GeneralInformation extends React.Component {
       name: '',
       email: '',
       phoneNumber: '',
+      edit: true,
     };
     this.updateName = this.updateName.bind(this);
     this.updateEmail = this.updateEmail.bind(this);
     this.updatePhoneNumber = this.updatePhoneNumber.bind(this);
+    this.toggleEdit = this.toggleEdit.bind(this);
   }
   updateName = (name) => {
     this.setState({ name: name });
@@ -22,12 +25,37 @@ class GeneralInformation extends React.Component {
   updatePhoneNumber = (phoneNumber) => {
     this.setState({ phoneNumber: phoneNumber });
   };
+  toggleEdit = (event) => {
+    event.preventDefault();
+    this.state.edit
+      ? this.setState({ edit: false })
+      : this.setState({ edit: true });
+  };
   render() {
-    return (
-      <div id="general-info-container">
-        <Input type="text" value={this.state.name} updater={this.updateName} />
-      </div>
-    );
+    let display;
+    if (this.state.edit) {
+      display = (
+        <GeneralInfoEdit
+          name={this.state.name}
+          email={this.state.email}
+          phoneNumber={this.state.phoneNumber}
+          updateName={this.updateName}
+          updateEmail={this.updateEmail}
+          updatePhoneNumber={this.updatePhoneNumber}
+          toggleEdit={this.toggleEdit}
+        />
+      );
+    } else {
+      display = (
+        <GeneralInfoDisplay
+          name={this.state.name}
+          email={this.state.email}
+          phoneNumber={this.state.phoneNumber}
+          toggleEdit={this.toggleEdit}
+        />
+      );
+    }
+    return <div id="general-info-container">{display}</div>;
   }
 }
 
