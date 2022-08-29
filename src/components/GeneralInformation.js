@@ -1,6 +1,9 @@
 import React from 'react';
+
 import GeneralInfoDisplay from './GeneralInfoDisplay.js';
 import GeneralInfoEdit from './GeneralInfoEdit.js';
+
+import './GeneralInformation.css';
 
 class GeneralInformation extends React.Component {
   constructor(props) {

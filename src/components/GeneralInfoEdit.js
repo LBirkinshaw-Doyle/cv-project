@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './GeneralInfoEdit.css';
+
 class GeneralInfoEdit extends React.Component {
   constructor(props) {
     super(props);
@@ -32,7 +34,7 @@ class GeneralInfoEdit extends React.Component {
   }
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form id="general-info-form" onSubmit={this.handleSubmit}>
         <label>
           Name:
           <input

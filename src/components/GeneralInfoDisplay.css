@@ -1,0 +1,21 @@
+#general-info-display {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: row;
+  gap: 1rem;
+  justify-items: center;
+
+  position: relative;
+}
+#general-info-display > h1 {
+  grid-column: 1/3;
+  margin: 0;
+}
+#general-info-display > span {
+  margin-top: 1rem;
+}
+#general-info-display > button {
+  position: absolute;
+  bottom: -1.5rem;
+  right: -1.5rem;
+}

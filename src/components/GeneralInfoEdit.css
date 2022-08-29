@@ -1,0 +1,17 @@
+#general-info-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: row;
+  gap: 1rem;
+}
+#general-info-form > label {
+  display: flex;
+  flex-direction: column;
+}
+#general-info-form > label:first-child {
+  grid-column: 1/3;
+}
+#general-info-form > input[type='submit'] {
+  margin-top: 1.1rem;
+  grid-column: 1/3;
+}
