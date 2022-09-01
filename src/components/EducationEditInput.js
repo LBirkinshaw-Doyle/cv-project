@@ -1,6 +1,6 @@
 import React from 'react';
 
-//import './EducationEditInput.css';
+import './EducationEditInput.css';
 
 class EducationEditInput extends React.Component {
   constructor(props) {
@@ -58,7 +58,7 @@ class EducationEditInput extends React.Component {
           />
         </label>
         <label>
-          date:
+          Date:
           <input
             type="date"
             value={this.state.dateValue}

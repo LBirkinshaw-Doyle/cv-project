@@ -1,0 +1,15 @@
+#education-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  grid-auto-flow: row;
+  gap: 1rem;
+}
+#education-form > button {
+  padding: 1rem 1.5rem;
+  justify-self: center;
+  align-self: center;
+}
+#education-form > input {
+  grid-column: 1/3;
+}

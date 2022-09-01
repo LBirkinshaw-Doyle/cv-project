@@ -2,7 +2,7 @@ import React from 'react';
 
 import EducationEditInput from './EducationEditInput';
 
-//import './EducationEdit.css';
+import './EducationEdit.css';
 
 class EducationEdit extends React.Component {
   constructor(props) {

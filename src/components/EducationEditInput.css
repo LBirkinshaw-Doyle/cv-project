@@ -1,0 +1,9 @@
+#education-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+#education-item > label {
+  display: flex;
+  flex-direction: column;
+}
