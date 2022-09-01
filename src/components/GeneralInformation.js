@@ -1,7 +1,7 @@
 import React from 'react';
 
-import GeneralInfoDisplay from './GeneralInfoDisplay.js';
-import GeneralInfoEdit from './GeneralInfoEdit.js';
+import GeneralInfoDisplay from './GeneralInfoDisplay';
+import GeneralInfoEdit from './GeneralInfoEdit';
 
 import './GeneralInformation.css';
 
