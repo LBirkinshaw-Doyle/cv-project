@@ -13,15 +13,22 @@ class EducationDisplay extends React.Component {
     this.props.toggleEdit(event);
   }
   render() {
+    let display = [];
+    this.props.educationList.forEach((educationItem) => {
+      display.push(
+        <span>{educationItem.school}</span>,
+        <span>{educationItem.title}</span>,
+        <span>{educationItem.date}</span>
+      );
+    });
     return (
-      /*
-      <div id="general-info-display">
-        <h1 id="general-info-name">{this.props.name}</h1>
-        <span id="general-info-email">{this.props.email}</span>
-        <span id="general-info-phone">{this.props.phoneNumber}</span>
+      <div id="education-display">
+        <h3>School</h3>
+        <h3>Course</h3>
+        <h3>Graduation</h3>
+        {display}
         <button onClick={this.handleEdit}>Edit</button>
-      </div>*/
-      <div></div>
+      </div>
     );
   }
 }
