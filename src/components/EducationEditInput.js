@@ -13,6 +13,7 @@ class EducationEditInput extends React.Component {
     this.handleSchoolChange = this.handleSchoolChange.bind(this);
     this.handleTitleChange = this.handleTitleChange.bind(this);
     this.handleDateChange = this.handleDateChange.bind(this);
+    this.handleDeleteEvent = this.handleDeleteEvent.bind(this);
   }
   componentDidUpdate(prevProps, prevState) {
     if (this.state !== prevState) {
@@ -32,6 +33,10 @@ class EducationEditInput extends React.Component {
   }
   handleDateChange(event) {
     this.setState({ dateValue: event.target.value });
+  }
+  handleDeleteEvent(event) {
+    event.preventDefault();
+    this.props.handleDelete(this.props.index);
   }
   render() {
     return (
@@ -60,6 +65,7 @@ class EducationEditInput extends React.Component {
             onChange={this.handleDateChange}
           />
         </label>
+        <button onClick={this.handleDeleteEvent}>Delete</button>
       </div>
     );
   }
