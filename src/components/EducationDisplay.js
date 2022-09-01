@@ -1,6 +1,6 @@
 import React from 'react';
 
-//import './EducationDisplay.css';
+import './EducationDisplay.css';
 
 class EducationDisplay extends React.Component {
   constructor(props) {

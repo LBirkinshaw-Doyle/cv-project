@@ -1,0 +1,17 @@
+#education-display {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-flow: row;
+  gap: 1rem;
+  justify-items: center;
+
+  position: relative;
+}
+#education-display > h3 {
+  margin: 0;
+}
+#education-display > button {
+  position: absolute;
+  bottom: -1.5rem;
+  right: -1.5rem;
+}
