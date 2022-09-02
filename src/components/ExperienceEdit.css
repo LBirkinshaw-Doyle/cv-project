@@ -1,0 +1,12 @@
+#experience-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#experience-form > button {
+  padding: 1rem 1.5rem;
+  align-self: center;
+}
+#experience-form > input {
+  grid-column: 1/3;
+}

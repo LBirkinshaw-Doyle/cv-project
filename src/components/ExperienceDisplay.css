@@ -1,0 +1,17 @@
+#experience-display {
+  display: grid;
+  grid-template-columns: 2fr 2fr 5fr 1fr 1fr;
+  grid-auto-flow: row;
+  gap: 1rem;
+  justify-items: center;
+
+  position: relative;
+}
+#experience-display > h3 {
+  margin: 0;
+}
+#experience-display > button {
+  position: absolute;
+  bottom: -1.5rem;
+  right: -1.5rem;
+}
